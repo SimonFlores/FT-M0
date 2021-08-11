@@ -5,7 +5,15 @@ function crearGato(nombre, edad) {
   // Agrega una propiedad al objeto con el nombre "edad" y usa el valor definido en el argumento "edad"
   // Agrega un método (funcion) llamado "meow" que devuelva el string "Meow!"
   // Devuelve el objeto
-  // Tu código:
+  // Tu código: 
+  var obj = {
+    nombre : nombre,
+    edad : edad,
+    meow : function (){
+      return "Meow!"
+    }
+  }
+  return obj
 }
 
 
@@ -76,6 +84,8 @@ function agregarAmigo(usuario, nuevoAmigo) {
   // Agrega "nuevoAmigo" al final de ese array
   // Devuelve el objeto "usuario"
   // Tu código:
+  usuario.nuevoAmigo.push(nuevoAmigo);
+  return usuario
 }
 
 function pasarUsuarioAPremium(usuarios) {
@@ -84,6 +94,10 @@ function pasarUsuarioAPremium(usuarios) {
   // Define cada propiedad "esPremium" de cada objeto como "true"
   // Devuelve el array de usuarios
   // Tu código:
+  for(let i = 0; i < usuarios.length; i++){
+    usuarios [i] .esPremium = true
+  }
+  return usuarios
 }
 
 function sumarLikesDeUsuario(usuario) {
@@ -105,7 +119,6 @@ function agregarMetodoCalculoDescuento(producto) {
   // producto.porcentajeDeDescuento -> 0.2 (o simplemente ".2")
   // producto.calcularPrecioDescuento() -> 20 - (20 * 0.2)
   // Tu código:
-
 }
 
 // No modificar nada debajo de esta línea
